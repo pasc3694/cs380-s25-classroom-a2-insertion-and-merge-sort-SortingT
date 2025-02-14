@@ -23,7 +23,7 @@ public:
 
 private:
 	void mergeSort(SortableArray &theArray, int leftIndex, int rightIndex);
-	void merge ();
+	void merge (SortableArray &theArray, int leftIndex, int middle, int rightIndex);
 };
 
 #endif

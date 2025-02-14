@@ -197,7 +197,7 @@ void timedSort(SortableArray &rcSortableArray, 	SortAlgorithm* pTheAlgoritm, Sor
 //********************************************************
 int main(int argc, char *argv[] )
 {
-  SortAlgorithm::Direction aDirs[]= { SortAlgorithm::Direction::ASC, SortAlgorithm::Direction::DESC};
+   SortAlgorithm::Direction aDirs[]= { SortAlgorithm::Direction::ASC, SortAlgorithm::Direction::DESC};
   std::string aDirStr[] = {"ASC", "DESC"};
 
   std::vector<SortAlgorithm *> cVecAlgos;
@@ -212,8 +212,9 @@ int main(int argc, char *argv[] )
 	}
 
   // ADD YOUR ALGORITHMS HERE
-  cVecAlgos.push_back (new BubbleSort());
-  cVecAlgos.push_back (new InsertionSort());
+//   cVecAlgos.push_back (new BubbleSort());
+//   cVecAlgos.push_back (new InsertionSort());
+  cVecAlgos.push_back (new MergeSort());
 
   studentCount = loadFromFile(cOriginalArray, argv[1], studentCount);
   //writeToFile(cOriginalArray, "data/out.txt", 100000);
