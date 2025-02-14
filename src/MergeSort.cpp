@@ -19,6 +19,19 @@
 // Returned:  none
 //	
 //********************************************************
-void MergeSort::sort(SortableArray &theArray)
+void MergeSort::sort(SortableArray &theArray) 
 {
+    mergeSort (theArray, 0, theArray.count());
+}
+
+void MergeSort::mergeSort  (SortableArray &theArray, int leftIndex, int rightIndex)
+{
+
+    int middle;
+    if (leftIndex < rightIndex){
+        middle = ((leftIndex + rightIndex) / 2);
+        MergeSort::mergeSort (theArray, leftIndex, middle);
+        MergeSort::mergeSort (theArray, middle, rightIndex);
+
+    }
 }

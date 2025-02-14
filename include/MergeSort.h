@@ -22,7 +22,8 @@ public:
 	virtual const  std::string name() const {return "Merge Sort";};
 
 private:
-
+	void mergeSort(SortableArray &theArray, int leftIndex, int rightIndex);
+	void merge ();
 };
 
 #endif
